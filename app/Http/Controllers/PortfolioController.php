@@ -53,17 +53,20 @@ class PortfolioController extends Controller
             (object) [
                 'year' => '2021 - 2024',
                 'title' => 'Learning & Foundations',
-                'description' => 'Memulai perjalanan di dunia pemrograman. Mempelajari HTML, CSS, JavaScript, dan membangun fondasi logika algoritma dasar.'
+                'description' => 'Memulai perjalanan di dunia pemrograman. Mempelajari HTML, CSS, JavaScript, dan membangun fondasi logika algoritma dasar.',
+                'type' => 'education'
             ],
             (object) [
                 'year' => '2024 - 2026',
                 'title' => 'Backend & Laravel Development',
-                'description' => 'Mendalami framework Laravel dan PHP. Mulai mengerjakan proyek-proyek manajemen data, sistem informasi, dan API backend.'
+                'description' => 'Mendalami framework Laravel dan PHP. Mulai mengerjakan proyek-proyek manajemen data, sistem informasi, dan API backend.',
+                'type' => 'work'
             ],
             (object) [
                 'year' => '2026 - Sekarang',
                 'title' => 'Advanced Full Stack Development',
-                'description' => 'Membangun dan merancang sistem berskala menengah hingga besar dengan arsitektur modern (TALL stack, Flutter, dll).'
+                'description' => 'Membangun dan merancang sistem berskala menengah hingga besar dengan arsitektur modern (TALL stack, Flutter, dll).',
+                'type' => 'project'
             ]
         ];
 

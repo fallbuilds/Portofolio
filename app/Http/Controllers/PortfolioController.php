@@ -14,6 +14,7 @@ class PortfolioController extends Controller
                 'technologies' => ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS'],
                 'github_url' => null,
                 'demo_url' => 'https://jmbcargo.com',
+                'featured' => true,
             ],
             (object) [
                 'title' => 'TugasKu',
@@ -21,6 +22,7 @@ class PortfolioController extends Controller
                 'technologies' => ['Flutter', 'Laravel API', 'MySQL'],
                 'github_url' => null,
                 'demo_url' => null,
+                'featured' => true,
             ],
             (object) [
                 'title' => 'Sistem Informasi Akademik',
@@ -28,6 +30,7 @@ class PortfolioController extends Controller
                 'technologies' => ['Laravel', 'MySQL', 'Bootstrap', 'REST API'],
                 'github_url' => null,
                 'demo_url' => null,
+                'featured' => true,
             ]
         ];
 

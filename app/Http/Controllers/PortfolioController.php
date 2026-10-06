@@ -36,18 +36,18 @@ class PortfolioController extends Controller
         ];
 
         $skills = [
-            (object) ['name' => 'Laravel', 'level' => 90],
-            (object) ['name' => 'PHP', 'level' => 85],
-            (object) ['name' => 'JavaScript', 'level' => 80],
-            (object) ['name' => 'HTML', 'level' => 95],
-            (object) ['name' => 'CSS', 'level' => 90],
-            (object) ['name' => 'Tailwind CSS', 'level' => 88],
-            (object) ['name' => 'Bootstrap', 'level' => 85],
-            (object) ['name' => 'MySQL', 'level' => 82],
-            (object) ['name' => 'Git', 'level' => 80],
-            (object) ['name' => 'REST API', 'level' => 85],
-            (object) ['name' => 'Flutter', 'level' => 70],
-            (object) ['name' => 'Three.js', 'level' => 65],
+            (object) ['name' => 'Laravel', 'level' => 90, 'category' => 'backend'],
+            (object) ['name' => 'PHP', 'level' => 85, 'category' => 'backend'],
+            (object) ['name' => 'JavaScript', 'level' => 80, 'category' => 'frontend'],
+            (object) ['name' => 'HTML', 'level' => 95, 'category' => 'frontend'],
+            (object) ['name' => 'CSS', 'level' => 90, 'category' => 'frontend'],
+            (object) ['name' => 'Tailwind CSS', 'level' => 88, 'category' => 'frontend'],
+            (object) ['name' => 'Bootstrap', 'level' => 85, 'category' => 'frontend'],
+            (object) ['name' => 'MySQL', 'level' => 82, 'category' => 'backend'],
+            (object) ['name' => 'Git', 'level' => 80, 'category' => 'tools'],
+            (object) ['name' => 'REST API', 'level' => 85, 'category' => 'backend'],
+            (object) ['name' => 'Flutter', 'level' => 70, 'category' => 'mobile'],
+            (object) ['name' => 'Three.js', 'level' => 65, 'category' => 'frontend'],
         ];
 
         $experiences = [

@@ -9,10 +9,37 @@
             <!-- Profile Card (2 cols) -->
             <div class="lg:col-span-2">
                 <div class="tilt-card group relative bg-dark-800/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 hover:border-accent-cyan/20 transition-all duration-500 h-full" data-animate="fade-up" data-delay="0.2">
-                    <div class="relative w-28 h-28 mx-auto rounded-full border-2 border-accent-cyan/30 overflow-hidden mb-6 group-hover:border-accent-cyan/60 transition-colors bg-dark-900/50">
-                        <img src="{{ asset('images/profile.jpg') }}" alt="Profile Photo" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Naufal+Ramadhan&background=1a1a25&color=527bff&size=200'">
-                        <div class="absolute inset-0 bg-accent-cyan/5 rounded-full group-hover:bg-transparent transition-colors"></div>
+                    <div class="relative w-36 h-36 mx-auto rounded-full border-2 border-accent-cyan/30 overflow-hidden mb-6 group-hover:border-accent-cyan/60 transition-all duration-300 bg-dark-900/50 cursor-pointer shadow-[0_0_15px_rgba(0,245,255,0.1)] group-hover:shadow-[0_0_25px_rgba(0,245,255,0.2)]" onclick="toggleProfileImage(this)" title="Click to swap identity!">
+                        <img id="profile-img-1" src="{{ asset('images/profile-1.png') }}" alt="Profile Photo Formal" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100">
+                        <img id="profile-img-2" src="{{ asset('images/profile-2.png') }}" alt="Profile Photo Cyber" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                        
+                        <!-- Scanline overlay for cyber effect -->
+                        <div class="absolute inset-0 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.1)_50%)] bg-[length:100%_4px]"></div>
+                        
+                        <!-- Hover hint -->
+                        <div class="absolute inset-0 bg-dark-900/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-[10px] font-mono text-accent-cyan px-2 py-1 bg-dark-900/80 rounded border border-accent-cyan/30 tracking-widest">SWAP_ID</span>
+                        </div>
                     </div>
+                    
+                    <script>
+                        function toggleProfileImage(container) {
+                            const img1 = container.querySelector('#profile-img-1');
+                            const img2 = container.querySelector('#profile-img-2');
+                            
+                            if (img1.classList.contains('opacity-100')) {
+                                img1.classList.replace('opacity-100', 'opacity-0');
+                                img2.classList.replace('opacity-0', 'opacity-100');
+                                container.style.filter = 'contrast(150%) hue-rotate(90deg) brightness(1.2)';
+                                setTimeout(() => container.style.filter = 'none', 150);
+                            } else {
+                                img2.classList.replace('opacity-100', 'opacity-0');
+                                img1.classList.replace('opacity-0', 'opacity-100');
+                                container.style.filter = 'contrast(150%) hue-rotate(90deg) brightness(1.2)';
+                                setTimeout(() => container.style.filter = 'none', 150);
+                            }
+                        }
+                    </script>
                     <div class="text-center">
                         <h3 class="text-xl font-heading font-bold">Naufal Ramadhan Wicaksana</h3>
                         <p class="text-accent-cyan text-sm font-mono mt-1">Full Stack Developer</p>

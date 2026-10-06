@@ -15,6 +15,7 @@ class PortfolioController extends Controller
                 'github_url' => null,
                 'demo_url' => 'https://jmbcargo.com',
                 'featured' => true,
+                'image' => 'images/jmb-cargo.png'
             ],
             (object) [
                 'title' => 'TugasKu',

@@ -13,33 +13,42 @@
                 
                 <!-- Visual Header Banner -->
                 <div class="relative h-52 bg-dark-800 overflow-hidden border-b border-gray-800/50">
-                    <div class="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500 bg-[radial-gradient(#00f5ff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-                    
-                    <!-- Decorative Graphic Badge -->
-                    <div class="absolute top-4 left-4 z-10 flex items-center gap-2">
+                    <!-- Decorative Graphic Badge (Always visible) -->
+                    <div class="absolute top-4 left-4 z-20 flex items-center gap-2">
                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium border bg-dark-900/80 backdrop-blur-sm {{ $project->featured ? 'text-accent-cyan border-accent-cyan/40 shadow-[0_0_10px_rgba(0,245,255,0.2)]' : 'text-gray-400 border-gray-700' }}">
                             <span class="w-1.5 h-1.5 rounded-full {{ $project->featured ? 'bg-accent-cyan animate-pulse' : 'bg-gray-500' }}"></span>
                             {{ $project->featured ? 'FEATURED' : 'PROJECT' }}
                         </span>
                     </div>
 
-                    <!-- Project Logo / Abstract Icon -->
-                    <div class="absolute inset-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
-                        <div class="w-20 h-20 rounded-2xl bg-accent-cyan/10 border border-white/10 flex items-center justify-center backdrop-blur-sm group-hover:border-accent-cyan/40 shadow-xl transition-all">
-                            @if(str_contains(strtolower($project->title), 'cargo'))
-                                <svg class="w-10 h-10 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-                            @elseif(str_contains(strtolower($project->title), 'tugas'))
-                                <svg class="w-10 h-10 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
-                            @elseif(str_contains(strtolower($project->title), 'ai'))
-                                <svg class="w-10 h-10 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                            @else
-                                <svg class="w-10 h-10 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-                            @endif
+                    @if($project->image ?? false)
+                        <!-- Image Banner -->
+                        <div class="absolute inset-0 w-full h-full">
+                            <img src="{{ asset($project->image) }}" alt="{{ $project->title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-800 via-transparent to-transparent opacity-80"></div>
                         </div>
-                    </div>
+                    @else
+                        <!-- Abstract Fallback Banner -->
+                        <div class="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500 bg-[radial-gradient(#00f5ff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        
+                        <!-- Project Logo / Abstract Icon -->
+                        <div class="absolute inset-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-700 z-10">
+                            <div class="w-20 h-20 rounded-2xl bg-accent-cyan/10 border border-white/10 flex items-center justify-center backdrop-blur-sm group-hover:border-accent-cyan/40 shadow-xl transition-all">
+                                @if(str_contains(strtolower($project->title), 'cargo'))
+                                    <svg class="w-10 h-10 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                                @elseif(str_contains(strtolower($project->title), 'tugas'))
+                                    <svg class="w-10 h-10 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                                @elseif(str_contains(strtolower($project->title), 'ai'))
+                                    <svg class="w-10 h-10 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                @else
+                                    <svg class="w-10 h-10 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                                @endif
+                            </div>
+                        </div>
 
-                    <!-- Ambient Glow -->
-                    <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 w-48 h-20 bg-accent-cyan/15 blur-2xl rounded-full pointer-events-none group-hover:bg-accent-cyan/25 transition-all"></div>
+                        <!-- Ambient Glow -->
+                        <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 w-48 h-20 bg-accent-cyan/15 blur-2xl rounded-full pointer-events-none group-hover:bg-accent-cyan/25 transition-all z-10"></div>
+                    @endif
                 </div>
 
                 <!-- Content Area -->

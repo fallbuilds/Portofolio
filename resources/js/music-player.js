@@ -34,13 +34,13 @@ export function initMusicPlayer() {
         {
             title: 'bye (slowed)',
             artist: 'Altare',
-            src: 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_2c270dc844.mp3?filename=lofi-study-112191.mp3', // Placeholder chill track
+            src: '/audio/bgm.mp3', // Menggunakan lagu awal Anda!
             cover: '/images/profile-1.png'
         },
         {
             title: 'worry (ultra slowed)',
             artist: 'LONOWN',
-            src: 'https://cdn.pixabay.com/download/audio/2022/10/25/audio_6506f0e637.mp3?filename=empty-mind-122976.mp3', // Placeholder ambient track
+            src: '/audio/track2.mp3', // Tempat untuk lagu kedua
             cover: '/images/profile-2.png'
         }
     ];

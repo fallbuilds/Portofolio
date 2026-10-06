@@ -5,6 +5,7 @@ import { initHeroScene } from './three/hero';
 import { initContactForm } from './contact';
 import { initSkillsScene } from './three/skills';
 import { initGlobal3D } from './three/global-bg';
+import { initAudioToggle } from './audio';
 import { initMusicPlayer } from './music-player';
 
 
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     initAnimations(isMobile, prefersReducedMotion);
     initContactForm();
+    initAudioToggle();
     initMusicPlayer();
     
     if (!isMobile) {

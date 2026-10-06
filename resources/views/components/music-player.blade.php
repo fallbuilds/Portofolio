@@ -82,12 +82,12 @@
                     <div class="flex items-center gap-3 overflow-hidden">
                         <span class="text-xs font-mono text-gray-500 w-4">01</span>
                         <div class="truncate">
-                            <p class="text-sm font-medium text-white truncate group-hover:text-accent-cyan transition-colors">bye (slowed)</p>
-                            <p class="text-[10px] text-gray-500 font-mono">Altare</p>
+                            <p class="text-sm font-medium text-white truncate group-hover:text-accent-cyan transition-colors">Teh Hijau (Acoustic Chill)</p>
+                            <p class="text-[10px] text-gray-500 font-mono">Lofi Vibes</p>
                         </div>
                     </div>
                     <div class="flex items-center gap-2 shrink-0">
-                        <span class="text-[10px] font-mono text-gray-600">3:04</span>
+                        <span class="text-[10px] font-mono text-gray-600">2:26</span>
                         <svg class="w-4 h-4 text-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                     </div>
                 </button>
@@ -97,12 +97,12 @@
                     <div class="flex items-center gap-3 overflow-hidden">
                         <span class="text-xs font-mono text-gray-500 w-4">02</span>
                         <div class="truncate">
-                            <p class="text-sm font-medium text-gray-300 truncate group-hover:text-accent-cyan transition-colors">worry (ultra slowed)</p>
-                            <p class="text-[10px] text-gray-500 font-mono">LONOWN</p>
+                            <p class="text-sm font-medium text-gray-300 truncate group-hover:text-accent-cyan transition-colors">Kopi Malam (Slowed)</p>
+                            <p class="text-[10px] text-gray-500 font-mono">Midnight</p>
                         </div>
                     </div>
                     <div class="flex items-center gap-2 shrink-0">
-                        <span class="text-[10px] font-mono text-gray-600">4:16</span>
+                        <span class="text-[10px] font-mono text-gray-600">3:18</span>
                         <svg class="w-4 h-4 text-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                     </div>
                 </button>

@@ -32,15 +32,15 @@ export function initMusicPlayer() {
     // Playlist Data
     const playlist = [
         {
-            title: 'bye (slowed)',
-            artist: 'Altare',
-            src: '/audio/bgm.mp3', // Menggunakan lagu awal Anda!
+            title: 'Teh Hijau (Acoustic Chill)',
+            artist: 'Lofi Vibes',
+            src: 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_2c270dc844.mp3?filename=lofi-study-112191.mp3', // Working CDN Audio
             cover: '/images/profile-1.png'
         },
         {
-            title: 'worry (ultra slowed)',
-            artist: 'LONOWN',
-            src: '/audio/track2.mp3', // Tempat untuk lagu kedua
+            title: 'Kopi Malam (Slowed)',
+            artist: 'Midnight',
+            src: 'https://cdn.pixabay.com/download/audio/2022/10/25/audio_6506f0e637.mp3?filename=empty-mind-122976.mp3', // Working CDN Audio
             cover: '/images/profile-2.png'
         }
     ];

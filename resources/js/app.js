@@ -5,7 +5,7 @@ import { initHeroScene } from './three/hero';
 import { initContactForm } from './contact';
 import { initSkillsScene } from './three/skills';
 import { initGlobal3D } from './three/global-bg';
-import { initAudioToggle } from './audio';
+import { initMusicPlayer } from './music-player';
 
 
 const isMobile = /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 1024;
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     initAnimations(isMobile, prefersReducedMotion);
     initContactForm();
-    initAudioToggle();
+    initMusicPlayer();
     
     if (!isMobile) {
         initCursor();

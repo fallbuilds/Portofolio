@@ -49,5 +49,7 @@
     </button>
 
     <div id="toast-container" class="fixed top-6 right-6 z-[9999] space-y-3"></div>
+    
+    <x-music-player />
 </body>
 </html>

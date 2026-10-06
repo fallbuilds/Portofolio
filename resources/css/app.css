@@ -1,0 +1,477 @@
+@import 'tailwindcss';
+
+@source "../../resources/views";
+@source "../../resources/js";
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+/* ============================================
+   TAILWIND CSS v4 — Custom Theme
+   ============================================ */
+
+@theme {
+    /* Fonts */
+    --font-heading: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+    /* Dynamic Colors for Light/Dark Mode */
+    --color-dark-900: var(--bg-dark-900);
+    --color-dark-800: var(--bg-dark-800);
+    --color-dark-700: var(--bg-dark-700);
+    --color-dark-600: var(--bg-dark-600);
+
+    --color-accent-cyan: var(--accent-main);
+    
+    --color-gray-100: var(--text-gray-100);
+    --color-gray-300: var(--text-gray-300);
+    --color-gray-400: var(--text-gray-400);
+    --color-gray-500: var(--text-gray-500);
+    --color-gray-600: var(--text-gray-600);
+    --color-gray-700: var(--border-gray-700);
+    --color-gray-800: var(--border-gray-800);
+
+    /* Custom Animations */
+    --animate-float: float 6s ease-in-out infinite;
+    --animate-glow: glow 2s ease-in-out infinite alternate;
+    --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+    }
+
+    @keyframes glow {
+        from { box-shadow: 0 0 10px rgba(16, 185, 129, 0.1); }
+        to { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
+    }
+}
+
+@layer base {
+    :root, :root[data-theme="dark"] {
+        /* Dark Theme (Default) */
+        --bg-dark-900: #0a0a0f;
+        --bg-dark-800: #111118;
+        --bg-dark-700: #1a1a25;
+        --bg-dark-600: #252535;
+        
+        --accent-main: #10b981; /* Changed to Emerald Green to match nature */
+        
+        --text-gray-100: #f3f4f6;
+        --text-gray-300: #d1d5db;
+        --text-gray-400: #9ca3af;
+        --text-gray-500: #6b7280;
+        --text-gray-600: #4b5563;
+        
+        --border-gray-700: #374151;
+        --border-gray-800: #1f2937;
+    }
+    
+    :root[data-theme="light"] {
+        /* Light Theme */
+        --bg-dark-900: #f8fafc;
+        --bg-dark-800: #ffffff;
+        --bg-dark-700: #f1f5f9;
+        --bg-dark-600: #e2e8f0;
+        
+        --accent-main: #10b981;
+        
+        --text-gray-100: #0f172a;
+        --text-gray-300: #334155;
+        --text-gray-400: #475569;
+        --text-gray-500: #64748b;
+        --text-gray-600: #94a3b8;
+        
+        --border-gray-700: #cbd5e1;
+        --border-gray-800: #e2e8f0;
+    }
+    
+    body {
+        background-color: var(--bg-dark-900);
+        color: var(--text-gray-100);
+        transition: background-color 0.5s ease, color 0.5s ease;
+    }
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(16, 185, 129, 0.2) transparent;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(16, 185, 129, 0.2);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(16, 185, 129, 0.4);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--accent-main);
+}
+
+/* ============================================
+   LOADING SCREEN
+   ============================================ */
+
+#loading-screen {
+    transition: opacity 0.7s ease;
+}
+
+/* ============================================
+   CUSTOM CURSOR STYLES
+   ============================================ */
+
+#cursor-dot,
+#cursor-outline {
+    will-change: transform;
+    transition: none;
+}
+
+#cursor-dot.cursor-hover {
+    transform: scale(2.5) !important;
+    background-color: var(--accent-main);
+    mix-blend-mode: normal;
+    opacity: 0.8;
+}
+
+#cursor-outline.cursor-hover {
+    width: 3rem;
+    height: 3rem;
+    border-color: rgba(16, 185, 129, 0.8);
+    background: rgba(16, 185, 129, 0.05);
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+
+#navbar {
+    transition: all 0.3s ease;
+}
+
+#navbar.navbar-scrolled {
+    background: rgba(10, 10, 15, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-main);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--accent-main);
+}
+
+/* ============================================
+   MOBILE MENU SIDEBAR
+   ============================================ */
+
+#mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 15, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 30;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#mobile-menu-overlay.menu-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 280px;
+    background: rgba(17, 17, 24, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    padding: 96px 32px 32px 32px;
+    gap: 8px;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s ease;
+}
+
+#mobile-menu.menu-active {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.mobile-nav-link {
+    font-family: var(--font-heading), sans-serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #d1d5db;
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.mobile-nav-link:hover {
+    color: var(--accent-main);
+    background: rgba(16, 185, 129, 0.08);
+}
+
+#mobile-menu.menu-active .mobile-nav-link {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#mobile-menu.menu-active .mobile-nav-link:nth-child(1) { transition-delay: 0.1s; }
+#mobile-menu.menu-active .mobile-nav-link:nth-child(2) { transition-delay: 0.15s; }
+#mobile-menu.menu-active .mobile-nav-link:nth-child(3) { transition-delay: 0.2s; }
+#mobile-menu.menu-active .mobile-nav-link:nth-child(4) { transition-delay: 0.25s; }
+#mobile-menu.menu-active .mobile-nav-link:nth-child(5) { transition-delay: 0.3s; }
+#mobile-menu.menu-active .mobile-nav-link:nth-child(6) { transition-delay: 0.35s; }
+
+/* ============================================
+   HAMBURGER MENU
+   ============================================ */
+
+.hamburger-line {
+    transition: all 0.3s ease;
+}
+
+.menu-open .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-open .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-open .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ============================================
+   GLASSMORPHISM CARDS
+   ============================================ */
+
+.glass-card {
+    background: rgba(17, 17, 24, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ============================================
+   TILT CARDS
+   ============================================ */
+
+.tilt-card {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+/* ============================================
+   MAGNETIC BUTTONS
+   ============================================ */
+
+.magnetic-btn {
+    transition: transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
+    will-change: transform;
+}
+
+.magnetic-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(16, 185, 129, 0.1), transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.magnetic-btn:hover::after {
+    opacity: 1;
+}
+
+/* ============================================
+   SKILL CARDS
+   ============================================ */
+
+.skill-card {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.08);
+}
+
+/* ============================================
+   PROJECT CARDS
+   ============================================ */
+
+.project-card {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.06);
+}
+
+/* ============================================
+   TIMELINE
+   ============================================ */
+
+.timeline-line {
+    background: var(--accent-main);
+}
+
+/* ============================================
+   NOISE / GRAIN TEXTURE
+   ============================================ */
+
+.noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+/* ============================================
+   FOCUS STYLES (Accessibility)
+   ============================================ */
+
+*:focus-visible {
+    outline: 2px solid var(--accent-main);
+    outline-offset: 2px;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    outline: none;
+}
+
+/* ============================================
+   PREFERS-REDUCED-MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .tilt-card {
+        transform: none !important;
+    }
+
+    #cursor-dot,
+    #cursor-outline {
+        display: none !important;
+    }
+
+    #loading-screen {
+        display: none !important;
+    }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .timeline-item > div:first-child {
+        display: none;
+    }
+}
+
+/* ============================================
+   TYPING CURSOR
+   ============================================ */
+
+#typed-role::after {
+    content: '|';
+    color: var(--accent-main);
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* ============================================
+   SKILL CARDS FILTER TRANSITION
+   ============================================ */
+
+.skill-card {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+/* ============================================
+   TIKTOK BACKGROUND VIDEO
+   ============================================ */
+.tiktok-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: none !important;
+}
+
+/* On landscape screens (desktop), we rotate the vertical video -90deg so it spans the width */
+@media (orientation: landscape) {
+    .tiktok-bg {
+        width: 100vh !important;
+        height: 100vw !important;
+        transform: translate(-50%, -50%) rotate(-90deg);
+    }
+}

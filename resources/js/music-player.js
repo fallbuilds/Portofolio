@@ -171,10 +171,11 @@ export function initMusicPlayer() {
 
     // Seek
     progressContainer.addEventListener('click', (e) => {
-        const width = progressContainer.clientWidth;
-        const clickX = e.offsetX;
+        const rect = progressContainer.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const width = rect.width;
         const duration = audio.duration;
-        if (duration) {
+        if (duration && !isNaN(duration)) {
             audio.currentTime = (clickX / width) * duration;
         }
     });
@@ -183,16 +184,12 @@ export function initMusicPlayer() {
     audio.volume = 0.8; // default
     
     const setVolume = (e) => {
-        const width = volContainer.clientWidth;
-        let clickX = e.offsetX;
-        
         // Handle dragging
         if (e.type === 'mousemove' && e.buttons !== 1) return;
         
-        if (e.target === volHandle) {
-           const rect = volContainer.getBoundingClientRect();
-           clickX = e.clientX - rect.left;
-        }
+        const rect = volContainer.getBoundingClientRect();
+        const width = rect.width;
+        const clickX = e.clientX - rect.left;
 
         let percent = clickX / width;
         if (percent < 0) percent = 0;

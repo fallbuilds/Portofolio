@@ -16,7 +16,7 @@ class ContactController extends Controller
             'message' => 'required|string|max:5000',
         ]);
 
-        ContactMessage::create($validated);
+        // ContactMessage::create($validated); // Disabled since we aren't using a database
 
         return response()->json([
             'success' => true,

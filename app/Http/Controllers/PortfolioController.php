@@ -2,17 +2,67 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Project;
-use App\Models\Skill;
-use App\Models\Experience;
-
 class PortfolioController extends Controller
 {
     public function index()
     {
-        $projects = Project::ordered()->get();
-        $skills = Skill::ordered()->get();
-        $experiences = Experience::ordered()->get();
+        // STATIS DATA: Karena tidak mau pakai database
+        $projects = [
+            (object) [
+                'title' => 'JMB Cargo',
+                'description' => 'Sistem manajemen pengiriman barang dengan fitur tracking real-time, invoice otomatis, dan dashboard analytics.',
+                'technologies' => ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS'],
+                'github_url' => null,
+                'demo_url' => 'https://jmbcargo.com',
+            ],
+            (object) [
+                'title' => 'TugasKu',
+                'description' => 'Aplikasi task management mobile dengan fitur kolaborasi tim, reminder, dan integrasi calendar.',
+                'technologies' => ['Flutter', 'Laravel API', 'MySQL'],
+                'github_url' => null,
+                'demo_url' => null,
+            ],
+            (object) [
+                'title' => 'Sistem Informasi Akademik',
+                'description' => 'Platform manajemen data akademik sekolah dengan fitur portal nilai siswa, absensi digital, dan rekapitulasi laporan otomatis.',
+                'technologies' => ['Laravel', 'MySQL', 'Bootstrap', 'REST API'],
+                'github_url' => null,
+                'demo_url' => null,
+            ]
+        ];
+
+        $skills = [
+            (object) ['name' => 'Laravel', 'level' => 90],
+            (object) ['name' => 'PHP', 'level' => 85],
+            (object) ['name' => 'JavaScript', 'level' => 80],
+            (object) ['name' => 'HTML', 'level' => 95],
+            (object) ['name' => 'CSS', 'level' => 90],
+            (object) ['name' => 'Tailwind CSS', 'level' => 88],
+            (object) ['name' => 'Bootstrap', 'level' => 85],
+            (object) ['name' => 'MySQL', 'level' => 82],
+            (object) ['name' => 'Git', 'level' => 80],
+            (object) ['name' => 'REST API', 'level' => 85],
+            (object) ['name' => 'Flutter', 'level' => 70],
+            (object) ['name' => 'Three.js', 'level' => 65],
+        ];
+
+        $experiences = [
+            (object) [
+                'year' => '2021 - 2024',
+                'title' => 'Learning & Foundations',
+                'description' => 'Memulai perjalanan di dunia pemrograman. Mempelajari HTML, CSS, JavaScript, dan membangun fondasi logika algoritma dasar.'
+            ],
+            (object) [
+                'year' => '2024 - 2026',
+                'title' => 'Backend & Laravel Development',
+                'description' => 'Mendalami framework Laravel dan PHP. Mulai mengerjakan proyek-proyek manajemen data, sistem informasi, dan API backend.'
+            ],
+            (object) [
+                'year' => '2026 - Sekarang',
+                'title' => 'Advanced Full Stack Development',
+                'description' => 'Membangun dan merancang sistem berskala menengah hingga besar dengan arsitektur modern (TALL stack, Flutter, dll).'
+            ]
+        ];
 
         return view('home', compact('projects', 'skills', 'experiences'));
     }

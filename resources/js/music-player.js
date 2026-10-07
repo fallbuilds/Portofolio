@@ -12,7 +12,7 @@ export function initMusicPlayer() {
     const nextBtn = document.getElementById('btn-next');
     const titleEl = document.getElementById('player-title');
     const artistEl = document.getElementById('player-artist');
-    // const coverEl = document.getElementById('player-cover'); // If we have different covers
+    const coverEl = document.getElementById('player-cover');
     const eqAnim = document.getElementById('player-eq');
     
     // Progress
@@ -35,13 +35,13 @@ export function initMusicPlayer() {
             title: 'Teh Hijau (Acoustic Chill)',
             artist: 'Lofi Vibes',
             src: 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_2c270dc844.mp3?filename=lofi-study-112191.mp3', // Working CDN Audio
-            cover: '/images/profile-1.png'
+            cover: '/images/profile.png'
         },
         {
             title: 'Kopi Malam (Slowed)',
             artist: 'Midnight',
             src: 'https://cdn.pixabay.com/download/audio/2022/10/25/audio_6506f0e637.mp3?filename=empty-mind-122976.mp3', // Working CDN Audio
-            cover: '/images/profile-2.png'
+            cover: '/images/profile.png'
         }
     ];
 
@@ -70,7 +70,7 @@ export function initMusicPlayer() {
         audio.src = track.src;
         titleEl.textContent = track.title;
         artistEl.textContent = track.artist;
-        // coverEl.src = track.cover;
+        if (coverEl) coverEl.src = track.cover;
         
         // Update active class on playlist
         playlistItems.forEach((item, i) => {

@@ -15,7 +15,7 @@
         <div class="flex items-center gap-4 mb-6 p-3 bg-dark-800/50 rounded-xl border border-gray-800/40">
             <div class="w-14 h-14 rounded-lg bg-dark-900 overflow-hidden shrink-0 border border-gray-700/50 relative">
                 <!-- Cover Image -->
-                <img id="player-cover" src="{{ asset('images/profile-1.png') }}" class="w-full h-full object-cover opacity-80" alt="Cover">
+                <img id="player-cover" src="{{ asset('images/profile.png') }}" class="w-full h-full object-cover opacity-80" alt="Cover">
                 <div class="absolute inset-0 bg-accent-cyan/10"></div>
             </div>
             <div class="flex-1 min-w-0">

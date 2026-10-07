@@ -47,18 +47,25 @@ class PortfolioController extends Controller
         ];
 
         $skills = [
+            // Backend
             (object) ['name' => 'Laravel', 'level' => 90, 'category' => 'backend'],
             (object) ['name' => 'PHP', 'level' => 85, 'category' => 'backend'],
-            (object) ['name' => 'JavaScript', 'level' => 80, 'category' => 'frontend'],
+            (object) ['name' => 'Java', 'level' => 75, 'category' => 'backend'],
+            (object) ['name' => 'REST API', 'level' => 85, 'category' => 'backend'],
+            (object) ['name' => 'MySQL', 'level' => 82, 'category' => 'backend'],
+            
+            // Frontend
+            (object) ['name' => 'JavaScript', 'level' => 85, 'category' => 'frontend'],
+            (object) ['name' => 'React', 'level' => 75, 'category' => 'frontend'],
+            (object) ['name' => 'Tailwind CSS', 'level' => 90, 'category' => 'frontend'],
             (object) ['name' => 'HTML', 'level' => 95, 'category' => 'frontend'],
             (object) ['name' => 'CSS', 'level' => 90, 'category' => 'frontend'],
-            (object) ['name' => 'Tailwind CSS', 'level' => 88, 'category' => 'frontend'],
-            (object) ['name' => 'Bootstrap', 'level' => 85, 'category' => 'frontend'],
-            (object) ['name' => 'MySQL', 'level' => 82, 'category' => 'backend'],
-            (object) ['name' => 'Git', 'level' => 80, 'category' => 'tools'],
-            (object) ['name' => 'REST API', 'level' => 85, 'category' => 'backend'],
-            (object) ['name' => 'Flutter', 'level' => 70, 'category' => 'mobile'],
-            (object) ['name' => 'Three.js', 'level' => 65, 'category' => 'frontend'],
+            (object) ['name' => 'Bootstrap', 'level' => 80, 'category' => 'frontend'],
+
+            // Mobile & Tools
+            (object) ['name' => 'Flutter', 'level' => 80, 'category' => 'mobile'],
+            (object) ['name' => 'Dart', 'level' => 75, 'category' => 'mobile'],
+            (object) ['name' => 'Git', 'level' => 85, 'category' => 'tools'],
         ];
 
         $experiences = [

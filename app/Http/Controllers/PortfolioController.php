@@ -47,10 +47,12 @@ class PortfolioController extends Controller
         ];
 
         $skills = [
-            // Backend
+            // Backend / Native
             (object) ['name' => 'Laravel', 'level' => 90, 'category' => 'backend'],
             (object) ['name' => 'PHP', 'level' => 85, 'category' => 'backend'],
             (object) ['name' => 'Java', 'level' => 75, 'category' => 'backend'],
+            (object) ['name' => 'C#', 'level' => 70, 'category' => 'backend'],
+            (object) ['name' => 'C++', 'level' => 70, 'category' => 'backend'],
             (object) ['name' => 'REST API', 'level' => 85, 'category' => 'backend'],
             (object) ['name' => 'MySQL', 'level' => 82, 'category' => 'backend'],
             

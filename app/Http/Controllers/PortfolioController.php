@@ -32,6 +32,15 @@ class PortfolioController extends Controller
                 'github_url' => null,
                 'demo_url' => null,
                 'featured' => true,
+            ],
+            (object) [
+                'title' => 'Ling Pedia',
+                'description' => 'Aplikasi web toko online (PPOB) untuk pembelian layanan digital, cek transaksi, dan manajemen jasa dengan antarmuka yang modern dan responsif.',
+                'technologies' => ['Laravel', 'Tailwind CSS', 'MySQL', 'API'],
+                'github_url' => null,
+                'demo_url' => null,
+                'featured' => true,
+                'image' => 'images/ling-pedia.png'
             ]
         ];
 

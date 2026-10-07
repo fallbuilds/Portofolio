@@ -34,6 +34,15 @@ class PortfolioController extends Controller
                 'demo_url' => null,
                 'featured' => true,
                 'image' => 'images/ling-pedia.png'
+            ],
+            (object) [
+                'title' => 'SakuRakyat API\'s',
+                'description' => 'Portal REST API yang bersih, cepat, dan tangguh untuk developer. Dilengkapi dengan dokumentasi interaktif, manajemen API Key, dan pantauan status sistem real-time.',
+                'technologies' => ['Laravel', 'REST API', 'Tailwind CSS'],
+                'github_url' => null,
+                'demo_url' => 'https://zarapi.my.id',
+                'featured' => true,
+                'image' => 'images/sakurakyat-api.png'
             ]
         ];
 

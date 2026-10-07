@@ -29,16 +29,16 @@
             <!-- Stats + Info (3 cols) -->
             <div class="lg:col-span-3 grid grid-cols-2 gap-4">
                 <div class="tilt-card bg-dark-800/30 backdrop-blur-sm border border-gray-800/50 rounded-xl p-6 hover:border-accent-cyan/20 transition-all duration-500 flex flex-col justify-center" data-animate="fade-up" data-delay="0.3">
-                    <div class="text-4xl font-bold text-accent-cyan mb-1 font-heading">1+</div>
+                    <div class="text-4xl font-bold text-accent-cyan mb-1 font-heading">5+</div>
                     <div class="text-gray-400 text-sm">Tahun Pengalaman</div>
                     <div class="w-full h-px bg-gray-800 mt-3"></div>
-                    <p class="text-gray-500 text-xs mt-3">Konsisten belajar dan membangun project secara mandiri</p>
+                    <p class="text-gray-500 text-xs mt-3">Konsisten belajar dan membangun project nyata sejak 2021</p>
                 </div>
                 <div class="tilt-card bg-dark-800/30 backdrop-blur-sm border border-gray-800/50 rounded-xl p-6 hover:border-accent-cyan/20 transition-all duration-500 flex flex-col justify-center" data-animate="fade-up" data-delay="0.4">
-                    <div class="text-4xl font-bold text-accent-cyan mb-1 font-heading">3+</div>
+                    <div class="text-4xl font-bold text-accent-cyan mb-1 font-heading">5+</div>
                     <div class="text-gray-400 text-sm">Projects Completed</div>
                     <div class="w-full h-px bg-gray-800 mt-3"></div>
-                    <p class="text-gray-500 text-xs mt-3">Fokus pada kualitas dan fundamental coding</p>
+                    <p class="text-gray-500 text-xs mt-3">Dari web app hingga sistem manajemen</p>
                 </div>
                 <div class="tilt-card bg-dark-800/30 backdrop-blur-sm border border-gray-800/50 rounded-xl p-6 hover:border-accent-cyan/20 transition-all duration-500 flex flex-col justify-center" data-animate="fade-up" data-delay="0.5">
                     <div class="text-4xl font-bold text-accent-cyan mb-1 font-heading">12+</div>

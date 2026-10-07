@@ -36,7 +36,7 @@
                         </div>
                         <div>
                             <p class="text-sm text-gray-500">Location</p>
-                            <p class="text-gray-300 font-medium">Indonesia</p>
+                            <p class="text-gray-300 font-medium">Tanjungpinang, Kepulauan Riau, Indonesia</p>
                         </div>
                     </div>
                 </div>

@@ -41,6 +41,15 @@ class PortfolioController extends Controller
                 'demo_url' => null,
                 'featured' => true,
                 'image' => 'images/ling-pedia.png'
+            ],
+            (object) [
+                'title' => 'Jagoan Pay',
+                'description' => 'Website Company Profile / Landing Page (Client Project) untuk aplikasi PPOB Jagoan Pay. Menampilkan fitur unggulan, simulasi keuntungan, dan konversi ke unduhan aplikasi mobile.',
+                'technologies' => ['HTML', 'Tailwind CSS', 'JavaScript', 'Landing Page'],
+                'github_url' => null,
+                'demo_url' => null,
+                'featured' => true,
+                'image' => 'images/jagoan-pay.png'
             ]
         ];
 

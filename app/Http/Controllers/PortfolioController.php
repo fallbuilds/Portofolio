@@ -18,20 +18,13 @@ class PortfolioController extends Controller
                 'image' => 'images/jmb-cargo.png'
             ],
             (object) [
-                'title' => 'TugasKu',
-                'description' => 'Aplikasi task management mobile dengan fitur kolaborasi tim, reminder, dan integrasi calendar.',
-                'technologies' => ['Flutter', 'Laravel API', 'MySQL'],
+                'title' => 'Jagoan Pay',
+                'description' => 'Website Company Profile / Landing Page (Client Project) untuk aplikasi PPOB Jagoan Pay. Menampilkan fitur unggulan, simulasi keuntungan, dan konversi ke unduhan aplikasi mobile.',
+                'technologies' => ['HTML', 'Tailwind CSS', 'JavaScript', 'Landing Page'],
                 'github_url' => null,
-                'demo_url' => null,
+                'demo_url' => 'https://jagoanpayment.com/',
                 'featured' => true,
-            ],
-            (object) [
-                'title' => 'Sistem Informasi Akademik',
-                'description' => 'Platform manajemen data akademik sekolah dengan fitur portal nilai siswa, absensi digital, dan rekapitulasi laporan otomatis.',
-                'technologies' => ['Laravel', 'MySQL', 'Bootstrap', 'REST API'],
-                'github_url' => null,
-                'demo_url' => null,
-                'featured' => true,
+                'image' => 'images/jagoan-pay.png'
             ],
             (object) [
                 'title' => 'Ling Pedia',
@@ -41,15 +34,6 @@ class PortfolioController extends Controller
                 'demo_url' => null,
                 'featured' => true,
                 'image' => 'images/ling-pedia.png'
-            ],
-            (object) [
-                'title' => 'Jagoan Pay',
-                'description' => 'Website Company Profile / Landing Page (Client Project) untuk aplikasi PPOB Jagoan Pay. Menampilkan fitur unggulan, simulasi keuntungan, dan konversi ke unduhan aplikasi mobile.',
-                'technologies' => ['HTML', 'Tailwind CSS', 'JavaScript', 'Landing Page'],
-                'github_url' => null,
-                'demo_url' => null,
-                'featured' => true,
-                'image' => 'images/jagoan-pay.png'
             ]
         ];
 

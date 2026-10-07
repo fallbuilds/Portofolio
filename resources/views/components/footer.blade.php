@@ -4,14 +4,14 @@
         <div class="grid md:grid-cols-3 gap-8 mb-8">
             <div>
                 <a href="#home" class="text-lg font-heading font-bold">Naufal Ramadhan<span class="text-accent-cyan"> Wicaksana</span></a>
-                <p class="text-gray-500 text-sm mt-2">Full Stack Developer yang passionate dalam membangun solusi digital modern.</p>
+                <p class="text-gray-500 text-sm mt-2" data-i18n="footer.desc">Beginner Developer yang passionate dalam membangun solusi digital modern.</p>
             </div>
             <div>
                 <h4 class="font-heading font-semibold text-sm text-gray-300 mb-3">Quick Links</h4>
                 <div class="space-y-2">
-                    <a href="#about" class="block text-sm text-gray-500 hover:text-accent-cyan transition-colors">About</a>
-                    <a href="#projects" class="block text-sm text-gray-500 hover:text-accent-cyan transition-colors">Projects</a>
-                    <a href="#contact" class="block text-sm text-gray-500 hover:text-accent-cyan transition-colors">Contact</a>
+                    <a href="#about" class="block text-sm text-gray-500 hover:text-accent-cyan transition-colors" data-i18n="nav.about">About</a>
+                    <a href="#projects" class="block text-sm text-gray-500 hover:text-accent-cyan transition-colors" data-i18n="nav.projects">Projects</a>
+                    <a href="#contact" class="block text-sm text-gray-500 hover:text-accent-cyan transition-colors" data-i18n="nav.contact">Contact</a>
                 </div>
             </div>
             <div>

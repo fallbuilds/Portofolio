@@ -26,17 +26,17 @@ $iconMap = [
     <div class="relative z-10 max-w-6xl mx-auto px-6">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
-                <p class="text-accent-cyan font-mono text-sm mb-2" data-animate="fade-up">// Skills & Technologies</p>
-                <h2 class="text-3xl md:text-4xl font-heading font-bold" data-animate="fade-up">My Tech <span class="text-accent-purple">Stack</span></h2>
+                <p class="text-accent-cyan font-mono text-sm mb-2" data-animate="fade-up" data-i18n="skills.subtitle">// Skills & Technologies</p>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold" data-animate="fade-up"><span data-i18n="skills.title_prefix">My Tech </span><span class="text-accent-purple" data-i18n="skills.title_suffix">Stack</span></h2>
             </div>
             
             <!-- Category Filter Tabs -->
             <div class="flex flex-wrap gap-2" data-animate="fade-up" data-delay="0.2">
-                <button type="button" class="skill-filter-btn active px-4 py-2 text-xs font-mono rounded-lg border transition-all duration-300 bg-accent-cyan/20 border-accent-cyan text-accent-cyan" data-filter="all">ALL</button>
-                <button type="button" class="skill-filter-btn px-4 py-2 text-xs font-mono rounded-lg border transition-all duration-300 bg-dark-800/50 border-gray-800 text-gray-400 hover:text-gray-200 hover:border-gray-700" data-filter="frontend">FRONTEND</button>
-                <button type="button" class="skill-filter-btn px-4 py-2 text-xs font-mono rounded-lg border transition-all duration-300 bg-dark-800/50 border-gray-800 text-gray-400 hover:text-gray-200 hover:border-gray-700" data-filter="backend">BACKEND</button>
-                <button type="button" class="skill-filter-btn px-4 py-2 text-xs font-mono rounded-lg border transition-all duration-300 bg-dark-800/50 border-gray-800 text-gray-400 hover:text-gray-200 hover:border-gray-700" data-filter="mobile">MOBILE</button>
-                <button type="button" class="skill-filter-btn px-4 py-2 text-xs font-mono rounded-lg border transition-all duration-300 bg-dark-800/50 border-gray-800 text-gray-400 hover:text-gray-200 hover:border-gray-700" data-filter="tools">TOOLS</button>
+                <button type="button" class="skill-filter-btn active px-4 py-2 text-xs font-mono rounded-lg border transition-all duration-300 bg-accent-cyan/20 border-accent-cyan text-accent-cyan" data-filter="all" data-i18n="skills.filter_all">ALL</button>
+                <button type="button" class="skill-filter-btn px-4 py-2 text-xs font-mono rounded-lg border transition-all duration-300 bg-dark-800/50 border-gray-800 text-gray-400 hover:text-gray-200 hover:border-gray-700" data-filter="frontend" data-i18n="skills.filter_frontend">FRONTEND</button>
+                <button type="button" class="skill-filter-btn px-4 py-2 text-xs font-mono rounded-lg border transition-all duration-300 bg-dark-800/50 border-gray-800 text-gray-400 hover:text-gray-200 hover:border-gray-700" data-filter="backend" data-i18n="skills.filter_backend">BACKEND</button>
+                <button type="button" class="skill-filter-btn px-4 py-2 text-xs font-mono rounded-lg border transition-all duration-300 bg-dark-800/50 border-gray-800 text-gray-400 hover:text-gray-200 hover:border-gray-700" data-filter="mobile" data-i18n="skills.filter_mobile">MOBILE</button>
+                <button type="button" class="skill-filter-btn px-4 py-2 text-xs font-mono rounded-lg border transition-all duration-300 bg-dark-800/50 border-gray-800 text-gray-400 hover:text-gray-200 hover:border-gray-700" data-filter="tools" data-i18n="skills.filter_tools">TOOLS</button>
             </div>
         </div>
         

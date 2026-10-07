@@ -7,6 +7,7 @@ import { initSkillsScene } from './three/skills';
 import { initGlobal3D } from './three/global-bg';
 import { initAudioToggle } from './audio';
 import { initMusicPlayer } from './music-player';
+import { initI18n } from './i18n';
 
 
 const isMobile = /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 1024;
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initAudioToggle();
     initMusicPlayer();
+    initI18n();
     
     if (!isMobile) {
         initCursor();

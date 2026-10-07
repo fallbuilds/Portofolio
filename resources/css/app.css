@@ -477,10 +477,11 @@ textarea:focus-visible {
 }
 
 
-/* Hide Google Translate Top Bar & Adjust widget */
-.goog-te-banner-frame { display: none !important; }
-body { top: 0px !important; }
-.goog-te-gadget { color: transparent !important; }
-.goog-te-gadget .goog-te-combo { color: #fff; background-color: rgba(30,30,30,0.8); border: 1px solid #333; border-radius: 6px; padding: 4px; outline: none; margin: 0; font-family: inherit; font-size: 0.8rem; }
-.goog-logo-link { display: none !important; }
-.goog-te-gadget span { display: none !important; }
+
+
+
+
+
+
+
+

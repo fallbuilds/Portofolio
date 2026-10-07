@@ -5,18 +5,21 @@
         <div class="flex items-center gap-4 lg:gap-8">
             <div class="hidden lg:block">
                 <nav class="flex items-center gap-8">
-                    <a href="#home" class="nav-link active relative text-sm font-medium text-gray-400 hover:text-accent-cyan transition-colors duration-300 py-2" data-section="home">Home</a>
-                    <a href="#about" class="nav-link relative text-sm font-medium text-gray-400 hover:text-accent-cyan transition-colors duration-300 py-2" data-section="about">About</a>
-                    <a href="#skills" class="nav-link relative text-sm font-medium text-gray-400 hover:text-accent-cyan transition-colors duration-300 py-2" data-section="skills">Skills</a>
-                    <a href="#projects" class="nav-link relative text-sm font-medium text-gray-400 hover:text-accent-cyan transition-colors duration-300 py-2" data-section="projects">Projects</a>
-                    <a href="#experience" class="nav-link relative text-sm font-medium text-gray-400 hover:text-accent-cyan transition-colors duration-300 py-2" data-section="experience">Experience</a>
-                    <a href="#contact" class="nav-link relative text-sm font-medium text-gray-400 hover:text-accent-cyan transition-colors duration-300 py-2" data-section="contact">Contact</a>
+                    <a href="#home" class="nav-link active relative text-sm font-medium text-gray-400 hover:text-accent-cyan transition-colors duration-300 py-2" data-section="home" data-i18n="nav.home">Home</a>
+                    <a href="#about" class="nav-link relative text-sm font-medium text-gray-400 hover:text-accent-cyan transition-colors duration-300 py-2" data-section="about" data-i18n="nav.about">About</a>
+                    <a href="#skills" class="nav-link relative text-sm font-medium text-gray-400 hover:text-accent-cyan transition-colors duration-300 py-2" data-section="skills" data-i18n="nav.skills">Skills</a>
+                    <a href="#projects" class="nav-link relative text-sm font-medium text-gray-400 hover:text-accent-cyan transition-colors duration-300 py-2" data-section="projects" data-i18n="nav.projects">Projects</a>
+                    <a href="#experience" class="nav-link relative text-sm font-medium text-gray-400 hover:text-accent-cyan transition-colors duration-300 py-2" data-section="experience" data-i18n="nav.experience">Experience</a>
+                    <a href="#contact" class="nav-link relative text-sm font-medium text-gray-400 hover:text-accent-cyan transition-colors duration-300 py-2" data-section="contact" data-i18n="nav.contact">Contact</a>
                 </nav>
             </div>
 
             <div class="flex items-center gap-2 lg:gap-3 z-50">
-                <!-- Google Translate Element -->
-                <div id="google_translate_element" class="scale-90 -mr-2 opacity-80 hover:opacity-100 transition-opacity"></div>
+                <!-- Custom Clean Language Switcher -->
+                <div class="flex items-center bg-dark-800/80 border border-gray-800/80 rounded-lg p-0.5 text-xs font-mono shadow-sm">
+                    <button type="button" id="btn-lang-id" class="px-2 py-0.5 rounded transition-all duration-200 text-accent-cyan font-bold bg-accent-cyan/20">ID</button>
+                    <button type="button" id="btn-lang-en" class="px-2 py-0.5 rounded transition-all duration-200 text-gray-400 hover:text-gray-200">EN</button>
+                </div>
                 
                 <button id="theme-toggle-btn" class="w-9 h-9 rounded-lg border border-gray-800 bg-dark-800/60 flex items-center justify-center text-gray-400 hover:text-accent-cyan hover:border-accent-cyan/30 transition-all duration-300" aria-label="Toggle theme" title="Toggle Light/Dark Mode">
                     <svg class="theme-dark-icon w-4 h-4 hidden text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
@@ -40,11 +43,12 @@
 
     <!-- Mobile Menu Sidebar -->
     <div id="mobile-menu">
-        <a href="#home" class="mobile-nav-link">Home</a>
-        <a href="#about" class="mobile-nav-link">About</a>
-        <a href="#skills" class="mobile-nav-link">Skills</a>
-        <a href="#projects" class="mobile-nav-link">Projects</a>
-        <a href="#experience" class="mobile-nav-link">Experience</a>
-        <a href="#contact" class="mobile-nav-link">Contact</a>
+        <a href="#home" class="mobile-nav-link" data-i18n="nav.home">Home</a>
+        <a href="#about" class="mobile-nav-link" data-i18n="nav.about">About</a>
+        <a href="#skills" class="mobile-nav-link" data-i18n="nav.skills">Skills</a>
+        <a href="#projects" class="mobile-nav-link" data-i18n="nav.projects">Projects</a>
+        <a href="#experience" class="mobile-nav-link" data-i18n="nav.experience">Experience</a>
+        <a href="#contact" class="mobile-nav-link" data-i18n="nav.contact">Contact</a>
     </div>
 </header>
+

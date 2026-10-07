@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio | Creative Developer</title>
+    <title>Portofolio Naufal</title>
     <meta name="description" content="Portfolio website of a Laravel & Full Stack Developer">
     <meta name="keywords" content="Portfolio, Laravel, Full Stack, Developer">
     <meta name="author" content="Creative Developer">
-    <meta property="og:title" content="Portfolio | Creative Developer">
+    <meta property="og:title" content="Portofolio Naufal">
     <meta property="og:description" content="Portfolio website of a Laravel & Full Stack Developer">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">

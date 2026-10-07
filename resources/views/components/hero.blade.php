@@ -21,7 +21,7 @@
         </div>
         
         <div class="mt-24 text-gray-400 text-sm font-mono tracking-wide" data-animate="fade-up" data-delay="0.3">
-            <p>A FULL-STACK DEVELOPER</p>
+            <p>A BEGINNER DEVELOPER</p>
         </div>
     </div>
 </section>

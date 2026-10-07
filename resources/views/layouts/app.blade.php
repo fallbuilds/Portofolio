@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Naufal Ramadhan Wicaksana | Full Stack Developer</title>
-    <meta name="description" content="Portofolio resmi Naufal Ramadhan Wicaksana. Full Stack Developer berpengalaman membangun aplikasi web modern dengan Laravel, React, PHP, dan Tailwind CSS.">
-    <meta name="keywords" content="Naufal Ramadhan Wicaksana, Full Stack Developer, Web Developer Indonesia, Laravel Developer, Programmer, Jasa Pembuatan Website, Portofolio Web">
+    <title>Naufal Ramadhan Wicaksana | Beginner Developer</title>
+    <meta name="description" content="Portofolio resmi Naufal Ramadhan Wicaksana. Beginner Developer berpengalaman membangun aplikasi web modern dengan Laravel, React, PHP, dan Tailwind CSS.">
+    <meta name="keywords" content="Naufal Ramadhan Wicaksana, Beginner Developer, Web Developer Indonesia, Laravel Developer, Programmer, Jasa Pembuatan Website, Portofolio Web">
     <meta name="author" content="Naufal Ramadhan Wicaksana">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://naufalramadhan.eu.cc">
@@ -13,14 +13,14 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://naufalramadhan.eu.cc">
-    <meta property="og:title" content="Naufal Ramadhan Wicaksana | Full Stack Developer">
-    <meta property="og:description" content="Portofolio resmi Naufal Ramadhan Wicaksana. Full Stack Developer berpengalaman membangun aplikasi web modern dengan Laravel, React, PHP, dan Tailwind CSS.">
+    <meta property="og:title" content="Naufal Ramadhan Wicaksana | Beginner Developer">
+    <meta property="og:description" content="Portofolio resmi Naufal Ramadhan Wicaksana. Beginner Developer berpengalaman membangun aplikasi web modern dengan Laravel, React, PHP, dan Tailwind CSS.">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://naufalramadhan.eu.cc">
-    <meta property="twitter:title" content="Naufal Ramadhan Wicaksana | Full Stack Developer">
-    <meta property="twitter:description" content="Portofolio resmi Naufal Ramadhan Wicaksana. Full Stack Developer berpengalaman membangun aplikasi web modern dengan Laravel, React, PHP, dan Tailwind CSS.">
+    <meta property="twitter:title" content="Naufal Ramadhan Wicaksana | Beginner Developer">
+    <meta property="twitter:description" content="Portofolio resmi Naufal Ramadhan Wicaksana. Beginner Developer berpengalaman membangun aplikasi web modern dengan Laravel, React, PHP, dan Tailwind CSS.">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">

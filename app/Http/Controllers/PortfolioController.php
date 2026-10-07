@@ -85,7 +85,7 @@ class PortfolioController extends Controller
             ],
             (object) [
                 'year' => '2026 - Sekarang',
-                'title' => 'Advanced Full Stack Development',
+                'title' => 'Beginner Developer Journey',
                 'description' => 'Membangun dan merancang sistem berskala menengah hingga besar dengan arsitektur modern (TALL stack, Flutter, dll).',
                 'type' => 'project'
             ]

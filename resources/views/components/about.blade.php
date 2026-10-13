@@ -10,7 +10,7 @@
             <div class="lg:col-span-2">
                 <div class="tilt-card group relative bg-dark-800/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 hover:border-accent-cyan/20 transition-all duration-500 h-full" data-animate="fade-up" data-delay="0.2">
                     <div class="relative w-28 h-28 mx-auto rounded-full border-2 border-accent-cyan/30 overflow-hidden mb-6 group-hover:border-accent-cyan/60 transition-colors bg-dark-900/50">
-                        <img src="{{ asset('images/profile.png') }}" alt="Profile Photo" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Naufal+Ramadhan&background=1a1a25&color=527bff&size=200'">
+                        <img src="{{ asset('images/profile.png') }}" alt="Foto Profil Naufal Ramadhan Wicaksana" width="112" height="112" loading="lazy" decoding="async" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Naufal+Ramadhan&background=1a1a25&color=527bff&size=200'">
                         <div class="absolute inset-0 bg-accent-cyan/5 rounded-full group-hover:bg-transparent transition-colors"></div>
                     </div>
                     <div class="text-center">

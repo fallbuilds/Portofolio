@@ -34,7 +34,7 @@
                     @if($project->image ?? false)
                         <!-- Image Banner -->
                         <div class="absolute inset-0 w-full h-full">
-                            <img src="{{ asset($project->image) }}" alt="{{ $project->title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+                            <img src="{{ asset($project->image) }}" alt="{{ $project->title }} preview" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                             <div class="absolute inset-0 bg-gradient-to-t from-dark-800 via-transparent to-transparent opacity-80"></div>
                         </div>
                     @else

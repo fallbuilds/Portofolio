@@ -45,7 +45,7 @@ $iconMap = [
             <div class="skill-card tilt-card group relative bg-dark-800/30 backdrop-blur-sm border border-gray-800/50 rounded-xl p-6 hover:border-accent-cyan/30 transition-all duration-500 cursor-default" data-category="{{ strtolower($skill->category ?? 'backend') }}" data-animate="fade-up" data-delay="{{ $loop->iteration * 0.05 }}">
                 <div class="flex flex-col items-center text-center relative z-10">
                     <div class="w-12 h-12 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <img src="{{ $iconMap[strtolower($skill->icon ?? $skill->name)] ?? 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/devicon/devicon-original.svg' }}" alt="{{ $skill->name }} logo" class="w-10 h-10 object-contain drop-shadow-md grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+                        <img src="{{ $iconMap[strtolower($skill->icon ?? $skill->name)] ?? 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/devicon/devicon-original.svg' }}" alt="{{ $skill->name }} logo" width="40" height="40" loading="lazy" decoding="async" class="w-10 h-10 object-contain drop-shadow-md grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
                     </div>
                     <h3 class="font-heading font-semibold text-sm mb-2">{{ $skill->name }}</h3>
                     <div class="w-full bg-dark-900/50 rounded-full h-1.5 mt-2 overflow-hidden">

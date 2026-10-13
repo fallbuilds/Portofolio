@@ -36,11 +36,11 @@
     <!-- Structured Data (JSON-LD Schema for Google Rich Results) -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@@context": "https://schema.org",
+      "@@graph": [
         {
-          "@type": "Person",
-          "@id": "https://naufalramadhan.eu.cc/#person",
+          "@@type": "Person",
+          "@@id": "https://naufalramadhan.eu.cc/#person",
           "name": "Naufal Ramadhan Wicaksana",
           "alternateName": "Naufal Ramadhan",
           "jobTitle": "Beginner Developer",
@@ -48,7 +48,7 @@
           "url": "https://naufalramadhan.eu.cc",
           "image": "https://naufalramadhan.eu.cc/images/profile.png",
           "address": {
-            "@type": "PostalAddress",
+            "@@type": "PostalAddress",
             "addressLocality": "Tanjungpinang",
             "addressRegion": "Kepulauan Riau",
             "addressCountry": "ID"
@@ -61,13 +61,13 @@
           ]
         },
         {
-          "@type": "WebSite",
-          "@id": "https://naufalramadhan.eu.cc/#website",
+          "@@type": "WebSite",
+          "@@id": "https://naufalramadhan.eu.cc/#website",
           "url": "https://naufalramadhan.eu.cc",
           "name": "Naufal Ramadhan Wicaksana Portfolio",
           "description": "Portofolio resmi Naufal Ramadhan Wicaksana - Web Developer dari Tanjungpinang, Indonesia.",
           "publisher": {
-            "@id": "https://naufalramadhan.eu.cc/#person"
+            "@@id": "https://naufalramadhan.eu.cc/#person"
           },
           "inLanguage": ["id", "en"]
         }

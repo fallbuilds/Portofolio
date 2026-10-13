@@ -15,6 +15,7 @@
                     str_contains(strtolower($project->title), 'jagoan') => 'projects.jagoan_desc',
                     str_contains(strtolower($project->title), 'ling') => 'projects.ling_desc',
                     str_contains(strtolower($project->title), 'sakurakyat') => 'projects.sakurakyat_desc',
+                    str_contains(strtolower($project->title), 'kagenime') => 'projects.kagenime_desc',
                     default => null,
                 };
             @endphp

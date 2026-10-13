@@ -9,6 +9,15 @@ class PortfolioController extends Controller
         // STATIS DATA: Karena tidak mau pakai database
         $projects = [
             (object) [
+                'title' => 'Kagenime',
+                'description' => 'Platform streaming dan informasi anime modern dengan katalog update, antarmuka responsif, dan pengalaman menonton yang mulus.',
+                'technologies' => ['Laravel', 'Tailwind CSS', 'JavaScript', 'REST API'],
+                'github_url' => null,
+                'demo_url' => 'https://kagenime.eu.cc',
+                'featured' => true,
+                'image' => 'images/kagenime.png'
+            ],
+            (object) [
                 'title' => 'JMB Cargo',
                 'description' => 'Sistem manajemen pengiriman barang dengan fitur tracking real-time, invoice otomatis, dan dashboard analytics.',
                 'technologies' => ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS'],
@@ -43,15 +52,6 @@ class PortfolioController extends Controller
                 'demo_url' => null,
                 'featured' => true,
                 'image' => 'images/sakurakyat-api.png'
-            ],
-            (object) [
-                'title' => 'Kagenime',
-                'description' => 'Platform streaming dan informasi anime modern dengan katalog update, antarmuka responsif, dan pengalaman menonton yang mulus.',
-                'technologies' => ['Laravel', 'Tailwind CSS', 'JavaScript', 'REST API'],
-                'github_url' => null,
-                'demo_url' => 'https://kagenime.eu.cc',
-                'featured' => true,
-                'image' => 'images/kagenime.png'
             ]
         ];
 

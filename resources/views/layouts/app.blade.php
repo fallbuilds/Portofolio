@@ -30,12 +30,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-dark-900 text-gray-100 font-body overflow-x-hidden relative">
-    <!-- GLOBAL BACKGROUND (Nature Video) -->
-    <div class="fixed inset-0 z-[-2] pointer-events-none overflow-hidden bg-dark-900">
-        <video autoplay loop muted playsinline class="tiktok-bg opacity-25">
-            <source src="{{ asset('videos/tiktok-bg.mp4') }}" type="video/mp4">
-        </video>
-    </div>
+    <!-- GLOBAL 3D INTERACTIVE BACKGROUND -->
     <div id="global-3d-canvas" class="fixed inset-0 z-[-1] pointer-events-none"></div>
 
     <div id="loading-screen" class="fixed inset-0 z-[9999] bg-dark-900 flex items-center justify-center transition-opacity duration-700">

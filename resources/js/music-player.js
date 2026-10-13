@@ -1,5 +1,5 @@
 export function initMusicPlayer() {
-    const toggleBtn = document.getElementById('toggle-player-btn');
+    const toggleBtn = document.getElementById('sound-toggle-btn');
     const playerModal = document.getElementById('listening-room');
     const closeBtn = document.getElementById('close-player-btn');
     
@@ -108,6 +108,15 @@ export function initMusicPlayer() {
         playBtn.innerHTML = '<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
         eqAnim.classList.remove('opacity-0');
         updatePlaylistIcons();
+        if (toggleBtn) {
+            const soundOn = toggleBtn.querySelector('.sound-on');
+            const soundOff = toggleBtn.querySelector('.sound-off');
+            if (soundOn && soundOff) {
+                soundOn.classList.remove('hidden');
+                soundOff.classList.add('hidden');
+            }
+            toggleBtn.classList.add('text-accent-cyan', 'border-accent-cyan/40');
+        }
     });
 
     audio.addEventListener('pause', () => {
@@ -115,6 +124,15 @@ export function initMusicPlayer() {
         playBtn.innerHTML = '<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
         eqAnim.classList.add('opacity-0');
         updatePlaylistIcons();
+        if (toggleBtn) {
+            const soundOn = toggleBtn.querySelector('.sound-on');
+            const soundOff = toggleBtn.querySelector('.sound-off');
+            if (soundOn && soundOff) {
+                soundOn.classList.add('hidden');
+                soundOff.classList.remove('hidden');
+            }
+            toggleBtn.classList.remove('text-accent-cyan', 'border-accent-cyan/40');
+        }
     });
 
     audio.addEventListener('ended', () => {

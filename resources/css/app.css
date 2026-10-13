@@ -454,34 +454,11 @@ textarea:focus-visible {
 }
 
 /* ============================================
-   TIKTOK BACKGROUND VIDEO
+   GLOBAL 3D BACKGROUND CANVAS
    ============================================ */
-.tiktok-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-width: none !important;
+#global-3d-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
 }
-
-/* On landscape screens (desktop), we rotate the vertical video -90deg so it spans the width */
-@media (orientation: landscape) {
-    .tiktok-bg {
-        width: 100vh !important;
-        height: 100vw !important;
-        transform: translate(-50%, -50%) rotate(-90deg);
-    }
-}
-
-
-
-
-
-
-
-
-
-

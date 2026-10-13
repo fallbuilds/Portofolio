@@ -114,11 +114,6 @@
     <audio id="audio-player" preload="metadata"></audio>
 </div>
 
-<!-- Floating Trigger Button -->
-<button id="toggle-player-btn" class="fixed bottom-6 left-6 z-[80] w-12 h-12 bg-dark-900/80 backdrop-blur-sm border border-accent-cyan/30 rounded-full flex items-center justify-center text-accent-cyan hover:bg-accent-cyan hover:text-dark-900 hover:scale-110 transition-all duration-300 shadow-[0_0_15px_rgba(0,245,255,0.2)] group" aria-label="Open Music Player">
-    <svg class="w-5 h-5 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
-</button>
-
 <style>
 @keyframes eq {
     0%, 100% { transform: scaleY(0.2); }

@@ -10,128 +10,114 @@ export function initGlobal3D(isMobile) {
     } catch { return; }
     
     const scene = new THREE.Scene();
-    // Add a very subtle dark red fog to blend with the dark background
-    scene.fog = new THREE.FogExp2(0x0a0505, 0.04);
+    scene.fog = new THREE.FogExp2(0x0a0a0f, 0.03);
     
     const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.set(0, 0, 15);
     
-    const renderer = new THREE.WebGLRenderer({ antialias: false, alpha: true, powerPreference: "high-performance" });
+    const renderer = new THREE.WebGLRenderer({ antialias: !isMobile, alpha: true, powerPreference: "high-performance" });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(1); // Force 1x pixel ratio for massive performance gain on full-screen
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     container.appendChild(renderer.domElement);
     
-    // Group for the entire "Robot Core"
-    const robotCore = new THREE.Group();
-    scene.add(robotCore);
+    // Group for the entire interactive 3D universe
+    const universe = new THREE.Group();
+    scene.add(universe);
     
-    // 1. The "Eye" (Central glowing sphere)
-    const eyeGeo = new THREE.SphereGeometry(1.5, 16, 16);
-    const eyeMat = new THREE.MeshBasicMaterial({ 
-        color: 0xff1111, 
-        wireframe: false,
-        transparent: true,
-        opacity: 0.8
+    // 1. Central Cyber Polyhedron (Cyan & Purple Wireframe)
+    const coreGeo = new THREE.IcosahedronGeometry(2.4, 1);
+    const coreMat = new THREE.MeshBasicMaterial({ 
+        color: 0x00f5ff, 
+        wireframe: true, 
+        transparent: true, 
+        opacity: 0.35 
     });
-    const eye = new THREE.Mesh(eyeGeo, eyeMat);
-    robotCore.add(eye);
+    const coreMesh = new THREE.Mesh(coreGeo, coreMat);
+    universe.add(coreMesh);
     
-    // 2. The "Iris" (Inner darker sphere)
-    const irisGeo = new THREE.SphereGeometry(1.55, 8, 8);
-    const irisMat = new THREE.MeshBasicMaterial({
-        color: 0x000000,
+    // Inner pulsing crystal
+    const innerGeo = new THREE.OctahedronGeometry(1.2, 0);
+    const innerMat = new THREE.MeshBasicMaterial({
+        color: 0xa855f7,
         wireframe: true,
         transparent: true,
-        opacity: 0.5
+        opacity: 0.55
     });
-    const iris = new THREE.Mesh(irisGeo, irisMat);
-    eye.add(iris);
+    const innerMesh = new THREE.Mesh(innerGeo, innerMat);
+    coreMesh.add(innerMesh);
     
-    // 3. The "Helmet / Armor" (Wireframe outer shell)
-    const armorGeo = new THREE.IcosahedronGeometry(3, 0);
-    const armorMat = new THREE.MeshBasicMaterial({
-        color: 0x330000,
-        wireframe: true,
-        transparent: true,
-        opacity: 0.2
-    });
-    const armor = new THREE.Mesh(armorGeo, armorMat);
-    robotCore.add(armor);
+    // 2. Orbital Rings
+    const ringGeo1 = new THREE.TorusGeometry(4.4, 0.03, 8, 64);
+    const ringMat1 = new THREE.MeshBasicMaterial({ color: 0x00f5ff, transparent: true, opacity: 0.3 });
+    const ring1 = new THREE.Mesh(ringGeo1, ringMat1);
+    ring1.rotation.x = Math.PI / 2.5;
+    universe.add(ring1);
     
-    // 4. Data Rings
-    const ringGeo1 = new THREE.TorusGeometry(5, 0.05, 8, 48);
-    const ringMat = new THREE.MeshBasicMaterial({ color: 0xff3333, transparent: true, opacity: 0.2 });
-    const ring1 = new THREE.Mesh(ringGeo1, ringMat);
-    ring1.rotation.x = Math.PI / 2;
-    robotCore.add(ring1);
-    
-    const ringGeo2 = new THREE.TorusGeometry(6, 0.02, 8, 48);
-    const ringMat2 = new THREE.MeshBasicMaterial({ color: 0x00f5ff, transparent: true, opacity: 0.1 });
+    const ringGeo2 = new THREE.TorusGeometry(5.6, 0.02, 8, 64);
+    const ringMat2 = new THREE.MeshBasicMaterial({ color: 0xa855f7, transparent: true, opacity: 0.25 });
     const ring2 = new THREE.Mesh(ringGeo2, ringMat2);
     ring2.rotation.y = Math.PI / 3;
-    robotCore.add(ring2);
+    universe.add(ring2);
     
-    // 5. Floating atmospheric particles (Digital Rain / Embers)
-    const pCount = isMobile ? 150 : 400;
+    // 3. Floating Interactive Constellation Particles
+    const pCount = isMobile ? 180 : 450;
     const pGeo = new THREE.BufferGeometry();
     const pPos = new Float32Array(pCount * 3);
     for (let i = 0; i < pCount * 3; i++) {
-        pPos[i] = (Math.random() - 0.5) * 40;
+        pPos[i] = (Math.random() - 0.5) * 45;
     }
     pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
     const pMat = new THREE.PointsMaterial({ 
-        color: 0xff4444, 
-        size: 0.05, 
+        color: 0x00f5ff, 
+        size: isMobile ? 0.07 : 0.09, 
         transparent: true, 
-        opacity: 0.4,
+        opacity: 0.65,
         blending: THREE.AdditiveBlending 
     });
     const particles = new THREE.Points(pGeo, pMat);
     scene.add(particles);
     
-    // Mouse tracking for parallax and "looking"
+    // Mouse tracking for parallax and interactive rotation
     const mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
-    if (!isMobile) {
-        window.addEventListener('mousemove', (e) => {
-            mouse.targetX = (e.clientX / window.innerWidth) * 2 - 1;
-            mouse.targetY = -(e.clientY / window.innerHeight) * 2 + 1;
-        }, { passive: true });
-    }
+    window.addEventListener('mousemove', (e) => {
+        mouse.targetX = (e.clientX / window.innerWidth) * 2 - 1;
+        mouse.targetY = -(e.clientY / window.innerHeight) * 2 + 1;
+    }, { passive: true });
     
-    // Scroll tracking to move the core up and down
+    // Scroll tracking to move the universe through space
     let scrollY = 0;
     window.addEventListener('scroll', () => {
         scrollY = window.scrollY;
     }, { passive: true });
     
     const clock = new THREE.Clock();
-    let animId;
     
     function animate() {
-        animId = requestAnimationFrame(animate);
+        requestAnimationFrame(animate);
         const t = clock.getElapsedTime();
         
         // Smooth mouse follow
         mouse.x += (mouse.targetX - mouse.x) * 0.05;
         mouse.y += (mouse.targetY - mouse.y) * 0.05;
         
-        // Robot Core looks at mouse
-        robotCore.rotation.y = mouse.x * 0.5 + Math.sin(t * 0.2) * 0.1;
-        robotCore.rotation.x = -mouse.y * 0.5 + Math.cos(t * 0.3) * 0.1;
+        // Universe dynamically tilts toward mouse
+        universe.rotation.y = mouse.x * 0.6 + Math.sin(t * 0.25) * 0.15;
+        universe.rotation.x = -mouse.y * 0.6 + Math.cos(t * 0.3) * 0.15;
         
-        // Internal animations
-        iris.rotation.y = t * 0.5;
-        iris.rotation.x = t * 0.3;
-        armor.rotation.y = -t * 0.1;
-        ring1.rotation.z = t * 0.2;
-        ring2.rotation.x = t * 0.1;
+        // Core & Rings internal spin
+        coreMesh.rotation.y = t * 0.2;
+        coreMesh.rotation.z = Math.sin(t * 0.15) * 0.2;
+        innerMesh.rotation.x = -t * 0.4;
+        innerMesh.rotation.y = t * 0.3;
+        ring1.rotation.z = t * 0.15;
+        ring2.rotation.x = -t * 0.1;
         
-        // Parallax effect on particles
-        particles.rotation.y = t * 0.02 + mouse.x * 0.1;
-        particles.rotation.x = mouse.y * 0.1;
+        // Parallax drift on galaxy particles
+        particles.rotation.y = t * 0.03 + mouse.x * 0.15;
+        particles.rotation.x = -mouse.y * 0.1;
         
-        // Move the entire scene based on scroll so it feels like we are traveling past it
-        const scrollOffset = scrollY * 0.01;
+        // Travel through depth on scroll
+        const scrollOffset = scrollY * 0.008;
         camera.position.y = -scrollOffset;
         
         renderer.render(scene, camera);

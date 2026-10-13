@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     initAnimations(isMobile, prefersReducedMotion);
     initContactForm();
-    initAudioToggle();
     initMusicPlayer();
     initI18n();
     
@@ -61,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (!prefersReducedMotion) {
         requestAnimationFrame(() => {
+            initGlobal3D(isMobile);
             initHeroScene(isMobile);
             initSkillsScene(isMobile);
         });

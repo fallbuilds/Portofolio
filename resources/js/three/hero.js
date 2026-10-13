@@ -27,9 +27,9 @@ export function initHeroScene(isMobile) {
     const mouseVec = new THREE.Vector2();
     
     // --- MATERIALS ---
-    const wireMat = new THREE.MeshBasicMaterial({ color: 0x527bff, wireframe: true, transparent: true, opacity: 0.2 });
-    const glowMat = new THREE.MeshBasicMaterial({ color: 0x527bff, wireframe: true, transparent: true, opacity: 0.5 });
-    const solidMat = new THREE.MeshBasicMaterial({ color: 0x527bff, transparent: true, opacity: 0.06 });
+    const wireMat = new THREE.MeshBasicMaterial({ color: 0x00f5ff, wireframe: true, transparent: true, opacity: 0.35 });
+    const glowMat = new THREE.MeshBasicMaterial({ color: 0x00f5ff, wireframe: true, transparent: true, opacity: 0.7 });
+    const solidMat = new THREE.MeshBasicMaterial({ color: 0x00f5ff, transparent: true, opacity: 0.1 });
     
     // --- HERO OBJECTS (interactive) ---
     const heroObjects = [];
@@ -166,12 +166,12 @@ export function initHeroScene(isMobile) {
         pPos[i * 3 + 2] = (Math.random() - 0.5) * 35;
     }
     pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
-    const pMat = new THREE.PointsMaterial({ color: 0x527bff, size: isMobile ? 0.02 : 0.015, transparent: true, opacity: 0.5, sizeAttenuation: true });
+    const pMat = new THREE.PointsMaterial({ color: 0x00f5ff, size: isMobile ? 0.025 : 0.02, transparent: true, opacity: 0.65, sizeAttenuation: true });
     const particles = new THREE.Points(pGeo, pMat);
     scene.add(particles);
     
     // --- CONNECTING LINES (dynamic constellation) ---
-    const linesMat = new THREE.LineBasicMaterial({ color: 0x527bff, transparent: true, opacity: 0.06 });
+    const linesMat = new THREE.LineBasicMaterial({ color: 0x00f5ff, transparent: true, opacity: 0.12 });
     const linesGeo = new THREE.BufferGeometry();
     const maxLines = isMobile ? 50 : 150;
     const linePositions = new Float32Array(maxLines * 6);
@@ -180,10 +180,10 @@ export function initHeroScene(isMobile) {
     scene.add(lines);
     
     // --- GRID ---
-    const grid = new THREE.GridHelper(40, 40, 0x527bff, 0x527bff);
+    const grid = new THREE.GridHelper(40, 40, 0x00f5ff, 0xa855f7);
     grid.position.y = -4;
     grid.material.transparent = true;
-    grid.material.opacity = 0.04;
+    grid.material.opacity = 0.08;
     scene.add(grid);
     
     // --- MOUSE INTERACTION ---

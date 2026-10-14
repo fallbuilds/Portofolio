@@ -17,7 +17,7 @@ export function initGlobal3D(isMobile) {
     
     const renderer = new THREE.WebGLRenderer({ antialias: !isMobile, alpha: true, powerPreference: "high-performance" });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.0 : 1.5));
     container.appendChild(renderer.domElement);
     
     // Group for the entire interactive 3D universe
@@ -90,10 +90,16 @@ export function initGlobal3D(isMobile) {
         scrollY = window.scrollY;
     }, { passive: true });
     
+    let isVisible = true;
+    document.addEventListener('visibilitychange', () => {
+        isVisible = !document.hidden;
+    }, { passive: true });
+    
     const clock = new THREE.Clock();
     
     function animate() {
         requestAnimationFrame(animate);
+        if (!isVisible) return;
         const t = clock.getElapsedTime();
         
         // Smooth mouse follow

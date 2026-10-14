@@ -2,34 +2,77 @@
 <html lang="id">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Naufal Ramadhan Wicaksana | Beginner Developer</title>
-    <!-- SEO & Metadata -->
-    <meta name="description" content="Portofolio resmi Naufal Ramadhan Wicaksana. Beginner Developer berpengalaman membangun aplikasi web modern dengan Laravel, React, PHP, Tailwind CSS, dan REST API.">
-    <meta name="keywords" content="Naufal Ramadhan Wicaksana, Naufal Ramadhan, Beginner Developer, Web Developer Indonesia, Tanjungpinang, Kepulauan Riau, Laravel Developer, Programmer Indonesia, Portofolio Web">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Naufal Ramadhan Wicaksana | Beginner Developer & Web Developer Tanjungpinang</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="title" content="Naufal Ramadhan Wicaksana | Beginner Developer & Web Developer Tanjungpinang">
+    <meta name="description" content="Portofolio resmi Naufal Ramadhan Wicaksana. Beginner Developer dari Tanjungpinang, Kepulauan Riau yang berfokus membangun aplikasi web modern, performa tinggi, dan responsif menggunakan Laravel, React, PHP, Tailwind CSS, dan REST API.">
+    <meta name="keywords" content="Naufal Ramadhan Wicaksana, Naufal Ramadhan, fallbuilds, Beginner Developer, Web Developer Tanjungpinang, Web Developer Kepulauan Riau, Web Developer Indonesia, Laravel Developer, Frontend Developer, Backend Developer, Full Stack Developer, Programmer Tanjungpinang, Kagenime, JMB Cargo, Jagoan Pay">
     <meta name="author" content="Naufal Ramadhan Wicaksana">
+    <meta name="creator" content="Naufal Ramadhan Wicaksana">
+    <meta name="publisher" content="Naufal Ramadhan Wicaksana">
+    
+    <!-- Search Engine Crawler Directives -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="theme-color" content="#0a0a0f">
-    <link rel="canonical" href="https://naufalramadhan.eu.cc">
-    <link rel="alternate" hreflang="id" href="https://naufalramadhan.eu.cc">
-    <link rel="alternate" hreflang="x-default" href="https://naufalramadhan.eu.cc">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="rating" content="general">
+    <meta name="revisit-after" content="7 days">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="profile">
-    <meta property="og:locale" content="id_ID">
+    <!-- Canonical & Multilingual / Hreflang -->
+    <link rel="canonical" href="https://naufalramadhan.eu.cc/">
+    <link rel="alternate" hreflang="id" href="https://naufalramadhan.eu.cc/">
+    <link rel="alternate" hreflang="en" href="https://naufalramadhan.eu.cc/">
+    <link rel="alternate" hreflang="x-default" href="https://naufalramadhan.eu.cc/">
+    
+    <!-- Geographic / Local SEO (Google Search Geo-Targeting) -->
+    <meta name="geo.region" content="ID-KR">
+    <meta name="geo.placename" content="Tanjungpinang, Kepulauan Riau, Indonesia">
+    <meta name="geo.position" content="0.9167;104.4500">
+    <meta name="ICBM" content="0.9167, 104.4500">
+    
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn / Discord -->
     <meta property="og:site_name" content="Naufal Ramadhan Wicaksana Portfolio">
-    <meta property="og:url" content="https://naufalramadhan.eu.cc">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://naufalramadhan.eu.cc/">
     <meta property="og:title" content="Naufal Ramadhan Wicaksana | Beginner Developer">
-    <meta property="og:description" content="Portofolio resmi Naufal Ramadhan Wicaksana. Beginner Developer berpengalaman membangun aplikasi web modern dengan Laravel, React, PHP, dan Tailwind CSS.">
+    <meta property="og:description" content="Portofolio resmi Naufal Ramadhan Wicaksana. Menampilkan proyek web modern, REST API, Laravel, React, dan keahlian full-stack development.">
     <meta property="og:image" content="https://naufalramadhan.eu.cc/images/profile.png">
-    <meta property="og:image:alt" content="Naufal Ramadhan Wicaksana">
+    <meta property="og:image:secure_url" content="https://naufalramadhan.eu.cc/images/profile.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Naufal Ramadhan Wicaksana Portfolio">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="profile:first_name" content="Naufal">
+    <meta property="profile:last_name" content="Ramadhan Wicaksana">
+    <meta property="profile:username" content="fallbuilds">
+    <meta property="profile:gender" content="male">
     
-    <!-- Twitter Card -->
+    <!-- Twitter / X Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://naufalramadhan.eu.cc">
+    <meta name="twitter:site" content="@fallbuilds">
+    <meta name="twitter:creator" content="@fallbuilds">
+    <meta name="twitter:url" content="https://naufalramadhan.eu.cc/">
     <meta name="twitter:title" content="Naufal Ramadhan Wicaksana | Beginner Developer">
-    <meta name="twitter:description" content="Portofolio resmi Naufal Ramadhan Wicaksana. Beginner Developer berpengalaman membangun aplikasi web modern dengan Laravel, React, PHP, dan Tailwind CSS.">
+    <meta name="twitter:description" content="Portofolio resmi Naufal Ramadhan Wicaksana. Web Developer spesialis Laravel, React, Tailwind CSS, dan REST API.">
     <meta name="twitter:image" content="https://naufalramadhan.eu.cc/images/profile.png">
+    <meta name="twitter:image:alt" content="Naufal Ramadhan Wicaksana Portfolio">
+    
+    <!-- Mobile App, PWA & Theme Optimization -->
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="color-scheme" content="dark">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Naufal Portfolio">
+    <meta name="application-name" content="Naufal Portfolio">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/profile.png">
     
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
@@ -42,17 +85,29 @@
           "@@type": "Person",
           "@@id": "https://naufalramadhan.eu.cc/#person",
           "name": "Naufal Ramadhan Wicaksana",
-          "alternateName": "Naufal Ramadhan",
+          "alternateName": ["Naufal Ramadhan", "fallbuilds"],
           "jobTitle": "Beginner Developer",
           "description": "Beginner Developer berpengalaman membangun aplikasi web modern dengan Laravel, PHP, JavaScript, dan teknologi web terkini.",
-          "url": "https://naufalramadhan.eu.cc",
+          "url": "https://naufalramadhan.eu.cc/",
           "image": "https://naufalramadhan.eu.cc/images/profile.png",
+          "email": "mailto:naufalramadhanwicaksana@gmail.com",
           "address": {
             "@@type": "PostalAddress",
             "addressLocality": "Tanjungpinang",
             "addressRegion": "Kepulauan Riau",
             "addressCountry": "ID"
           },
+          "knowsAbout": [
+            "Laravel",
+            "PHP",
+            "JavaScript",
+            "React",
+            "Tailwind CSS",
+            "REST API",
+            "MySQL",
+            "Flutter",
+            "Full Stack Web Development"
+          ],
           "sameAs": [
             "https://github.com/fallbuilds",
             "https://kagenime.eu.cc",
@@ -63,21 +118,32 @@
         {
           "@@type": "WebSite",
           "@@id": "https://naufalramadhan.eu.cc/#website",
-          "url": "https://naufalramadhan.eu.cc",
+          "url": "https://naufalramadhan.eu.cc/",
           "name": "Naufal Ramadhan Wicaksana Portfolio",
           "description": "Portofolio resmi Naufal Ramadhan Wicaksana - Web Developer dari Tanjungpinang, Indonesia.",
           "publisher": {
             "@@id": "https://naufalramadhan.eu.cc/#person"
           },
           "inLanguage": ["id", "en"]
+        },
+        {
+          "@@type": "ProfilePage",
+          "@@id": "https://naufalramadhan.eu.cc/#profilepage",
+          "url": "https://naufalramadhan.eu.cc/",
+          "name": "Naufal Ramadhan Wicaksana - Profil & Portofolio",
+          "mainEntity": {
+            "@@id": "https://naufalramadhan.eu.cc/#person"
+          }
         }
       ]
     }
     </script>
     
-    <!-- Preconnect & Fonts -->
+    <!-- Fast Preconnect, DNS-Prefetch & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     @vite(['resources/css/app.css', 'resources/js/app.js'])
